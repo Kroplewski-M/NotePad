@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="FileSaver.js"></script>
+    <h2 id="title">Notepad:</h2>
+    <h3 id="tools">Tools:</h3>
+
+    <div id = "setup">
+        <select id="textFont" onchange="changeFont(this)">
+            <option value="Arial">Arial</option>
+            <option value="Sans Serif">Sans Serif</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Impact">Impact</option>
+            <option value="Bookman">Bookman</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Monsterrat">Monsterrat</option>
+        </select>
+        <select id="fontSize" onchange="changeFontSize(this)">
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>14</option>
+            <option>16</option>
+            <option>18</option>
+            <option>20</option>
+            <option>22</option>
+            <option>24</option>
+            <option>26</option>
+            <option>28</option>
+            <option>36</option>
+            <option>48</option>
+        </select>
+        <input type="button" value="Bold" class ="style" onclick="isBold()">
+        <input type="button" value="Italic" class ="style" onclick="isItalic()">
+        <input type="button" value="Underline" class ="style" onclick="isUnderline()">
+        <br><br>
+
+        <textarea placeholder="Enter your text here..." id="content" 
+        rows="20" cols="100"></textarea>
+        <br>
+        <input type="button" value="Reset" class ="style" onclick="reset()">
+        <input type="button" value="Clear" class="style" onclick="clearPage()">
+        <input type="button" value="Export Notes" class="style" onclick="exportNotes()">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
